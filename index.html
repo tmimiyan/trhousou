@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <title>TRタブレット放送</title>
+
+
+  </head>
+  <body>
+
+<p align="center"><table>
+	<tr>
+		<td><button id="playmarunan" class="custom-button">南葉行き</button></td>
+		<td><button id="playmarushikida" class="custom-button">敷田町行き</button></td>
+                <td><button id="playmaruane" class="custom-button">姉川行き</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnmaru" class="custom-button">次丸ケ崎終点</button></td>
+		<td><button id="playsmaru" class="custom-button">終点丸ケ崎到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playntachiuma" class="custom-button">次立馬</button></td>
+		<td><button id="playstachiuma" class="custom-button">立馬到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnjiyuugaoka" class="custom-button">次自由が丘</button></td>
+		<td><button id="playsjiyuugaoka" class="custom-button">自由が丘到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnnakaebashi" class="custom-button">次中江橋</button></td>
+		<td><button id="playsnakaebashi" class="custom-button">中江橋着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnmizuno" class="custom-button">次水野</button></td>
+		<td><button id="playsmizuno" class="custom-button">水野着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnniwashiro" class="custom-button">次庭代</button></td>
+		<td><button id="playsniwashiro" class="custom-button">庭代到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnnanba" class="custom-button">次南葉</button></td>
+		<td><button id="playsnanba" class="custom-button">南葉到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnnanbaf" class="custom-button">次南葉終点</button></td>
+		<td><button id="playsnanbaf" class="custom-button">終点南葉到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnanbacyouj1" class="custom-button">次南葉町</button></td>
+		<td><button id="playnanbacyouj2" class="custom-button">南葉町到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnanegawa" class="custom-button">次姉川</button></td>
+		<td><button id="playsanekawa" class="custom-button">姉川到着</button></td>
+	</tr>
+	<tr>
+		<td><button id="playnanegawaf" class="custom-button">次姉川終点</button></td>
+		<td><button id="playsanekawaf" class="custom-button">終点姉川到着</button></td>
+	</tr>
+	<tr>
+                <td><button id="playnshikidacyouf" class="custom-button">次終点敷田町</button>
+		<td><button id="playsshikidacyouf" class="custom-button">終点敷田町到着</button></td>
+		<td><button id="playmarugasakiiki" class="custom-button">丸ケ崎行き</button></td>
+	</tr>
+</table></p>
+
+  <!-- 音声ファイル -->
+  <audio id="audiomarunan">
+    <source src="maruhatunan.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiomarushikida">
+    <source src="marushikida.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiomaruane">
+    <source src="maruane.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiontachiuma">
+    <source src="ntachiuma.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiostachiuma">
+    <source src="stachiuma.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionjiyuugaoka">
+    <source src="njiyuugaoka.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosjiyuugaoka">
+    <source src="sjiyuugaoka.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionnakaebashi">
+    <source src="nnakaebashi.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosnakaebashi">
+    <source src="snakaebashi.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionmizuno">
+    <source src="nmizuno.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosmizuno">
+    <source src="smizuno.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionniwashiro">
+    <source src="nniwashiro.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosniwashiro">
+    <source src="sniwashiro.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionnanba">
+    <source src="nnanba.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosnanba">
+    <source src="snanba.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionnanbaf">
+    <source src="nnanbaf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosnanbaf">
+    <source src="snanbaf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionanbacyouj1">
+    <source src="nanbacyouj1.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionanbacyouj2">
+    <source src="nanbacyouj2.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionanegawa">
+    <source src="nanegawa.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosanegawa">
+    <source src="sanekawa.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionanegawaf">
+    <source src="nanegawaf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosanegawaf">
+    <source src="sanekawaf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionshikidacyouf">
+    <source src="nshikidacyouf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosshikidacyouf">
+    <source src="sshikidacyouf.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiomarugasakiiki">
+    <source src="marugasakiiki.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audionmaru">
+    <source src="nmaru.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audiosmaru">
+    <source src="smaru.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnmaru = document.getElementById('playnmaru');
+    const audionmaru = document.getElementById('audionmaru');
+
+    // ボタンがクリックされたときの処理
+    playnmaru.addEventListener('click', () => {
+      audionmaru.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsmaru = document.getElementById('playsmaru');
+    const audiosmaru = document.getElementById('audiosmaru');
+
+    // ボタンがクリックされたときの処理
+    playsmaru.addEventListener('click', () => {
+      audiosmaru.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playmarugasakiiki = document.getElementById('playmarugasakiiki');
+    const audiomarugasakiiki = document.getElementById('audiomarugasakiiki');
+
+    // ボタンがクリックされたときの処理
+    playmarugasakiiki.addEventListener('click', () => {
+      audiomarugasakiiki.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnshikidacyouf = document.getElementById('playnshikidacyouf');
+    const audionshikidacyouf = document.getElementById('audionshikidacyouf');
+
+    // ボタンがクリックされたときの処理
+    playnshikidacyouf.addEventListener('click', () => {
+      audionshikidacyouf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsshikidacyouf = document.getElementById('playsshikidacyouf');
+    const audiosshikidacyouf = document.getElementById('audiosshikidacyouf');
+
+    // ボタンがクリックされたときの処理
+    playsshikidacyouf.addEventListener('click', () => {
+      audiosshikidacyouf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnanegawaf = document.getElementById('playnanegawaf');
+    const audionanegawaf = document.getElementById('audionanegawaf');
+
+    // ボタンがクリックされたときの処理
+    playnanegawaf.addEventListener('click', () => {
+      audionanegawaf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsanekawaf = document.getElementById('playsanekawaf');
+    const audiosanegawaf = document.getElementById('audiosanegawaf');
+
+    // ボタンがクリックされたときの処理
+    playsanekawaf.addEventListener('click', () => {
+      audiosanegawaf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnanegawa = document.getElementById('playnanegawa');
+    const audionanegawa = document.getElementById('audionanegawa');
+
+    // ボタンがクリックされたときの処理
+    playnanegawa.addEventListener('click', () => {
+      audionanegawa.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsanekawa = document.getElementById('playsanekawa');
+    const audiosanegawa = document.getElementById('audiosanegawa');
+
+    // ボタンがクリックされたときの処理
+    playsanekawa.addEventListener('click', () => {
+      audiosanegawa.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnanbacyouj1 = document.getElementById('playnanbacyouj1');
+    const audionanbacyouj1 = document.getElementById('audionanbacyouj1');
+
+    // ボタンがクリックされたときの処理
+    playnanbacyouj1.addEventListener('click', () => {
+      audionanbacyouj1.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnanbacyouj2 = document.getElementById('playnanbacyouj2');
+    const audionanbacyouj2 = document.getElementById('audionanbacyouj2');
+
+    // ボタンがクリックされたときの処理
+    playnanbacyouj2.addEventListener('click', () => {
+      audionanbacyouj2.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnnanbaf = document.getElementById('playnnanbaf');
+    const audionnanbaf = document.getElementById('audionnanbaf');
+
+    // ボタンがクリックされたときの処理
+    playnnanbaf.addEventListener('click', () => {
+      audionnanbaf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsnanbaf = document.getElementById('playsnanbaf');
+    const audiosnanbaf = document.getElementById('audiosnanbaf');
+
+    // ボタンがクリックされたときの処理
+    playsnanbaf.addEventListener('click', () => {
+      audiosnanbaf.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnnanba = document.getElementById('playnnanba');
+    const audionnanba = document.getElementById('audionnanba');
+
+    // ボタンがクリックされたときの処理
+    playnnanba.addEventListener('click', () => {
+      audionnanba.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsnanba = document.getElementById('playsnanba');
+    const audiosnanba = document.getElementById('audiosnanba');
+
+    // ボタンがクリックされたときの処理
+    playsnanba.addEventListener('click', () => {
+      audiosnanba.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnniwashiro = document.getElementById('playnniwashiro');
+    const audionniwashiro = document.getElementById('audionniwashiro');
+
+    // ボタンがクリックされたときの処理
+    playnniwashiro.addEventListener('click', () => {
+      audionniwashiro.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsniwashiro = document.getElementById('playsniwashiro');
+    const audiosniwashiro = document.getElementById('audiosniwashiro');
+
+    // ボタンがクリックされたときの処理
+    playsniwashiro.addEventListener('click', () => {
+      audiosniwashiro.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playmarunan = document.getElementById('playmarunan');
+    const audiomarunan = document.getElementById('audiomarunan');
+
+    // ボタンがクリックされたときの処理
+    playmarunan.addEventListener('click', () => {
+      audiomarunan.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playmarushikida = document.getElementById('playmarushikida');
+    const audiomarushikida = document.getElementById('audiomarushikida');
+
+    // ボタンがクリックされたときの処理
+    playmarushikida.addEventListener('click', () => {
+      audiomarushikida.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playmaruane = document.getElementById('playmaruane');
+    const audiomaruane = document.getElementById('audiomaruane');
+
+    // ボタンがクリックされたときの処理
+    playmaruane.addEventListener('click', () => {
+      audiomaruane.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playntachiuma = document.getElementById('playntachiuma');
+    const audiontachiuma = document.getElementById('audiontachiuma');
+
+    // ボタンがクリックされたときの処理
+    playntachiuma.addEventListener('click', () => {
+      audiontachiuma.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playstachiuma = document.getElementById('playstachiuma');
+    const audiostachiuma = document.getElementById('audiostachiuma');
+
+    // ボタンがクリックされたときの処理
+    playstachiuma.addEventListener('click', () => {
+      audiostachiuma.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnjiyuugaoka = document.getElementById('playnjiyuugaoka');
+    const audionjiyuugaoka = document.getElementById('audionjiyuugaoka');
+
+    // ボタンがクリックされたときの処理
+    playnjiyuugaoka.addEventListener('click', () => {
+      audionjiyuugaoka.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsjiyuugaoka = document.getElementById('playsjiyuugaoka');
+    const audiosjiyuugaoka = document.getElementById('audiosjiyuugaoka');
+
+    // ボタンがクリックされたときの処理
+    playsjiyuugaoka.addEventListener('click', () => {
+      audiosjiyuugaoka.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnnakaebashi = document.getElementById('playnnakaebashi');
+    const audionnakaebashi = document.getElementById('audionnakaebashi');
+
+    // ボタンがクリックされたときの処理
+    playnnakaebashi.addEventListener('click', () => {
+      audionnakaebashi.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsnakaebashi = document.getElementById('playsnakaebashi');
+    const audiosnakaebashi = document.getElementById('audiosnakaebashi');
+
+    // ボタンがクリックされたときの処理
+    playsnakaebashi.addEventListener('click', () => {
+      audiosnakaebashi.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playnmizuno = document.getElementById('playnmizuno');
+    const audionmizuno = document.getElementById('audionmizuno');
+
+    // ボタンがクリックされたときの処理
+    playnmizuno.addEventListener('click', () => {
+      audionmizuno.play(); // 音声を再生
+    });
+  </script>
+  <script>
+    // ボタンとオーディオ要素を取得
+    const playsmizuno = document.getElementById('playsmizuno');
+    const audiosmizuno = document.getElementById('audiosmizuno');
+
+    // ボタンがクリックされたときの処理
+    playsmizuno.addEventListener('click', () => {
+      audiosmizuno.play(); // 音声を再生
+    });
+  </script>
+
+<style>
+  .custom-button {
+    width: 150px; /* 幅 */
+    height: 50px; /* 高さ */
+  }
+
+.custom-button {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.custom-button:active {
+  font-size: 17px;
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
