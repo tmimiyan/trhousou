@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <title>TRタブレット放送</title>
+
+</head>
+<body>
+
+<div align="center">
+<br><label for="pageSelect"><b>発駅行先選択</b></label><br><br>
+<select id="action-select" name="" size="8" tabindex="0" style="width: 200px; height: 85px; font-size: 18px;">
+<option value="v1">鯖南口発→敷田町行</option>
+<option value="v2">鯖南口発→丸ケ崎行</option>
+<option value="v1s">丸ケ崎発→敷田町行</option>
+<option value="v3">丸ケ崎発→南葉行</option>
+<option value="v4">丸ケ崎発→姉川行</option>
+<option value="v5">敷田町発→鯖南口行</option>
+<option value="v6">敷田町発→丸ケ崎行</option>
+<option value="v7">南葉発→鯖南口行</option>
+<option value="v8">南葉発→丸ケ崎行</option>
+<option value="v9">姉川発→鯖南口行</option>
+<option value="v10">姉川発→丸ケ崎行</option>
+</select>
+<br><br><input type="button" name="" id="action-button" value="実行" style="width: 200px;">
+</div>
+
+    <script>
+        const selectBox = document.getElementById('action-select');
+        const actionButton = document.getElementById('action-button');
+
+        actionButton.addEventListener('click', () => {
+            const selectedValue = selectBox.value;
+
+            switch (selectedValue) {
+                case 'v1':
+                    location.href='v1.html';
+                    break;
+                case 'v2':
+                    location.href='v2.html';
+                    break;
+                case 'v1s':
+                    location.href='v1s.html';
+                    break;
+                case 'v3':
+                    location.href='v3.html';
+                    break;
+                case 'v4':
+                    location.href='v4.html';
+                    break;
+                case 'v5':
+                    location.href='v5.html';
+                    break;
+                case 'v6':
+                    location.href='v6.html';
+                    break;
+                case 'v7':
+                    location.href='v7.html';
+                    break;
+                case 'v8':
+                    location.href='v8.html';
+                    break;
+                case 'v9':
+                    location.href='v9.html';
+                    break;
+                case 'v10':
+                    location.href='v10.html';
+                    break;
+                default:
+                    alert('選択肢して下さい。');
+            }
+        });
+    </script>
+
+
+  <style>
+    input[type="button"] {
+      font-size: 24px; /* 文字サイズを20pxに設定 */
+    }
+  </style>
+
+</body>
+</html>
